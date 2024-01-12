@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: weddingDreams;
+  src: url("/src/assets/WeddingDreamDemoRegular.ttf");
+}
 
 :root {
   --primary-color: #f1faff;
@@ -73,7 +77,7 @@ body {
 }
 
 .nav__container {
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -115,7 +119,7 @@ body {
 }
 
 header {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   background-color: var(--primary-color);
 }
 
@@ -176,9 +180,9 @@ header {
 }
 
 .destination__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 125px;
 }
 
 .destination__card {
@@ -186,10 +190,14 @@ header {
   position: relative;
   isolation: isolate;
   cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .destination__card img {
   border-radius: 1rem;
+  width: 250px;
+  aspect-ratio: 1;
 }
 
 .destination__details {
@@ -201,7 +209,7 @@ header {
   transform: translateX(-50%);
   text-align: center;
   color: var(--extra-light);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(4px);
   border-radius: 10px;
   z-index: 1;
@@ -209,7 +217,7 @@ header {
 }
 
 .destination__card:hover .destination__details {
-  bottom: 1rem;
+  bottom: 0;
 }
 
 .destination__title {
@@ -428,28 +436,49 @@ header {
   margin-left: auto;
 }
 
-.trip__grid {
+.process__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   margin: 4rem 0;
 }
 
 .trip__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  /* width: 300px; */
+  /* aspect-ratio: 1/2; */
+  background-color: #e5e4e3;
+  transition: all ease 0.3s;
+}
+
+.trip__card:hover{
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.trip__card img {
+  display: block;
+  width: 50%;
+  align-self: center;
 }
 
 .trip__details {
-  padding: 1rem;
-  display: grid;
-  gap: 0.5rem;
-  font-size: 1rem;
+  width: 40%;
+  height: 25%;
+  position: absolute;
+  bottom: 25%;
+  left: 30%;
+  transform: rotate(-45deg); /* Center and rotate the text */
+  /* font-size: 1.5rem; */
   font-weight: 600;
   color: var(--text-dark);
-  background-color: var(--extra-light);
+  font-family:weddingDreams;
   cursor: pointer;
+  /* background-color: var(--primary-color); */
 }
 
 .rating {

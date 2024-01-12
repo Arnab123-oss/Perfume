@@ -4,11 +4,7 @@ import Props from "./component/Props";
 function App() {
   return (
     <Router>
-      
-      <Routes>
-        <Route path="/" element={<Props />} />
-      </Routes>
-    
+      <Props />
     </Router>
 
   );
