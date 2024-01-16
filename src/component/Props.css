@@ -195,6 +195,9 @@ header {
   border-radius: 50%;
   overflow: hidden;
 }
+.destination__card1{
+  border-radius: 10%;
+}
 
 .destination__card img {
   border-radius: 1rem;
@@ -217,6 +220,10 @@ header {
   border-radius: 10px;
   z-index: 1;
   transition: 0.3s;
+}
+.destination__details1 {
+  width: calc(100% - 0rem);
+  padding: 1.5rem;
 }
 
 .destination__card:hover .destination__details {
