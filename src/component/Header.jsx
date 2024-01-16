@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./Props.css";
 
 import logo from "../assets/logo.png"
-import PrimaryRoute from "../Routes";
+import { RiShieldUserLine,RiMenuSearchLine } from "react-icons/ri";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { GiPerfumeBottle } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 const Props = () => {
@@ -18,28 +20,28 @@ const Props = () => {
             <Link  to={'/home'}>HOME</Link>
           </li>
           <li className="link">
-            <a href="#">SHOP</a>
+            <a href="/products">SHOP</a>
           </li>
-          {/* <li class="link"><a href="#">PAGES</a></li> */}
-          {/* <li class="link"><a href="#">BLOG</a></li> */}
           <li className="link">
-            <a href="#">LOOKBOOK</a>
+            <a href="#">About Us</a>
           </li>
         </ul>
         <div className="nav__icons">
           <span>
-            <i className="ri-shield-user-line" />
+            <RiShieldUserLine />
           </span>
           <span>
-            <i className="ri-search-line" />
+            <RiMenuSearchLine />
           </span>
           <span>
-            <i className="ri-shopping-bag-2-line" />
+            <HiOutlineShoppingBag />
+          </span>
+          <span>
+            <GiPerfumeBottle />
           </span>
         </div>
       </nav>
-      <PrimaryRoute/>
-  <hr />
+ 
     </>
   );
 };

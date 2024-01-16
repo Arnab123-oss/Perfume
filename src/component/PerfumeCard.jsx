@@ -1,11 +1,13 @@
 import React from 'react'
 
-const PerfumeCard = ({image}) => {
+const PerfumeCard = ({image,name}) => {
   return (
-    <div className="trip__card">
-        <img src={image} alt="trip" />
-        <div className='trip__details'>Wedding Special</div>
-    </div>
+    <div className="destination__card">
+        <img src={image} alt="destination" />
+        <div className="destination__details">
+          <p className="destination__subtitle">{name}</p>
+        </div>
+      </div>
   )
 }
 
