@@ -52,7 +52,7 @@
     opacity: 1;
   }
   
-  button {
+ .news__grid button {
     /* position: absolute; */
     /* top: 50%; */
     /* transform: translateY(-50%); */
@@ -68,7 +68,7 @@
     transform: translateY(200%);
   }
   
-  button:hover {
+  .news__grid button:hover {
     background-color: #2980b9;
   }
   
