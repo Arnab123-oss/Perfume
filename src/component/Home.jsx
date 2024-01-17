@@ -19,6 +19,7 @@ import Party from "../assets/Party.png";
 import vintage from "../assets/vintage.png";
 
 import CardGrid from "./CardGrid";
+import Carousel from "./Carousel";
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,30 +53,7 @@ const Home = () => {
   return (
     <div>
       <header>
-        <div className="section__container header__container">
-          <div className="carousel">
-            <div
-              className="carousel-inner"
-              style={{
-                width: `${items.length * 100}%`,
-                transform: `translateX(-${
-                  (currentIndex * 100) / items.length
-                }%)`,
-                transition: "transform 0.5s ease-in-out",
-              }}
-            >
-              {items.map((item, index) => (
-                <div className="carousel-item" key={index}>
-                  <div className="header__content">
-                    <p>{item.saleText}</p>
-                    <h1>{item.header}</h1>
-                    <button className="btn">{item.buttonText}</button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      <Carousel />
       </header>
       <section className="section__container destination__container">
         <h2 className="section__title">Your Pronoun?</h2>
