@@ -89,7 +89,7 @@ const Home = () => {
           <CardGrid />
         </div>
       </section>
-      <section className="section__container brands__container">
+      {/* <section className="section__container brands__container">
         <div className="brand__image">
           <img src={brand1} alt="brand" />
         </div>
@@ -108,7 +108,7 @@ const Home = () => {
         <div className="brand__image">
           <img src={brand6} alt="brand" />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
