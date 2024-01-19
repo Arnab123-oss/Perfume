@@ -17,6 +17,7 @@ import premium from "../assets/premium.png";
 import sport from "../assets/sport.png";
 import CardGrid from "./CardGrid";
 import Carousel from "./Carousel";
+import ProductCarousel from "./ProductCarousel";
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -85,7 +86,7 @@ const Home = () => {
       <section className="news">
         <div className="section__container news__container">
           <h2 className="section__title">Latest Trends</h2>
-          <CardGrid />
+          <ProductCarousel />
         </div>
       </section>
       <section className="section__container brands__container">
