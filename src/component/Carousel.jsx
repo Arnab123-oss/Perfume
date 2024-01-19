@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 import "./Carousel.css";
-
+import { AiOutlineArrowRight } from "react-icons/ai";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 const ImageSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -58,10 +59,10 @@ const ImageSlider = () => {
 
           <div className="button">
             <button className="prev" onClick={() => rotateItems('prev')}>
-              Left
+             <AiOutlineArrowLeft size={15}/>
             </button>
             <button className="next" onClick={() => rotateItems('next')}>
-              Right
+            <AiOutlineArrowRight size={15} />
             </button>
           </div>
         </div>

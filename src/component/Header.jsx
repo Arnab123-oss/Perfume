@@ -23,7 +23,7 @@ const Props = () => {
             <a href="/products">SHOP</a>
           </li>
           <li className="link">
-            <a href="#">About Us</a>
+            <a href="/aboutus">About Us</a>
           </li>
         </ul>
         <div className="nav__icons">

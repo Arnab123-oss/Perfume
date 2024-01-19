@@ -15,6 +15,9 @@ import work from "../assets/OIG.png";
 import daily from "../assets/daily.png";
 import premium from "../assets/premium.png";
 import sport from "../assets/sport.png";
+import Party from "../assets/Party.png";
+import vintage from "../assets/vintage.png";
+
 import CardGrid from "./CardGrid";
 import Carousel from "./Carousel";
 import ProductCarousel from "./ProductCarousel";
@@ -65,7 +68,7 @@ const Home = () => {
           <div className="destination__card">
             <img src={female} alt="destination" />
             <div className="destination__details">
-              <p className="destination__subtitle">His</p>
+              <p className="destination__subtitle">Her</p>
             </div>
           </div>
         </div>
@@ -73,14 +76,12 @@ const Home = () => {
       <section className="section__container musthave__container">
         <h2 className="section__title">Your Preference</h2>
         <div className="process__grid">
-        <PerfumeCard image={daily} name="Everyday Essentials" />
-        <PerfumeCard image={sport} name="Sporty and Active" />
-        <PerfumeCard image={work} name="Vintage Classic" />
-        <PerfumeCard image={work} name="Party Special" />
+          <PerfumeCard image={daily} name="Everyday Essentials" />
+          <PerfumeCard image={sport} name="Sporty and Active" />
+          <PerfumeCard image={vintage} name="Vintage Classic" />
+          <PerfumeCard image={Party} name="Party Special" />
           <PerfumeCard image={work} name="Workplace Elegance" />
           <PerfumeCard image={premium} name="Limited Editions" />
-          
-          
         </div>
       </section>
       <section className="news">
@@ -89,7 +90,7 @@ const Home = () => {
           <ProductCarousel />
         </div>
       </section>
-      <section className="section__container brands__container">
+      {/* <section className="section__container brands__container">
         <div className="brand__image">
           <img src={brand1} alt="brand" />
         </div>
@@ -108,7 +109,7 @@ const Home = () => {
         <div className="brand__image">
           <img src={brand6} alt="brand" />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
