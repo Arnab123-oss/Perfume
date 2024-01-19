@@ -120,9 +120,7 @@ body {
  
 }
 .nav__icons span:hover {
-  font-size: 2rem;
-  transition-delay: 0.5s;
- 
+color:#234567;
 }
 
 header {
