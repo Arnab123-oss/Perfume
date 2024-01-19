@@ -3,16 +3,24 @@ import React, { useState } from 'react';
 import "./Carousel.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+
+import brand1 from "../assets/banner-1.jpg";
+import brand2 from "../assets/banner-2.jpg";
+import brand3 from "../assets/banner-3.jpg";
+import brand4 from "../assets/banner-4.jpg";
+import brand5 from "../assets/brand-5.png";
+
+
 const ImageSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Array of image URLs
   const [imageUrls, setImageUrls] = useState([
-    'https://i.ibb.co/qCkd9jS/img1.jpg',
-    'https://i.ibb.co/jrRb11q/img2.jpg',
-    'https://i.ibb.co/NSwVv8D/img3.jpg',
-    'https://i.ibb.co/Bq4Q0M8/img4.jpg',
-    'https://i.ibb.co/jTQfmTq/img5.jpg',
+    brand1,
+    brand2,
+    brand3,
+    brand4,
+    brand1,
   ]);
 
   const handlePrevClick = () => {
@@ -49,7 +57,7 @@ const ImageSlider = () => {
                 style={{ backgroundImage: `url(${imageUrl})` }}
               >
                 <div className="content">
-                  <div className="name">Slide {index + 1}</div>
+                  <div className="name">Slide {index}</div>
                   <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
                   <button>See More</button>
                 </div>
