@@ -15,7 +15,7 @@ const ImageSlider = () => {
 
   // Array of image URLs
   const [imageUrls, setImageUrls] = useState([
-    brand1,
+    // brand1,
     brand2,
     brand3,
     brand4,
@@ -59,6 +59,7 @@ const ImageSlider = () => {
                 className={`item ${index === currentSlide ? "active" : ""}`}
                 style={{ backgroundImage: `url(${imageUrl})` }}
               >
+                {/* <img src={imageUrl} /> */}
                 <div className="content">
                   <div className="name">Slide {index}</div>
                   <div className="des">

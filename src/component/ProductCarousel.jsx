@@ -3,7 +3,7 @@
 
 2. if you want to change the dimensions of the slides you will need to edit the slideWidth variable here 👇 and the $slide-width variable in the CSS.
 ************************************/
-import React from "react";
+import React, { useEffect } from "react";
 import "./ProductCarousel.css"
 const slideWidth = 30;
 
@@ -80,20 +80,44 @@ const CarouselSlideItem = ({pos, idx, activeIdx}) => {
 
     return (
         <li className="carousel__slide-item" style={item.styles}>
-            <div className="carousel__slide-item-img-link">
-                <img src={item.player.image} alt={item.player.title} />
+            <div class="page-wrapper">
+  <div class="page-inner">
+    <div class="row">
+      <div class="el-wrapper">
+        <div class="box-up">
+          <img class="img" src="http://code.slicecrowd.com/labs/4/images/t-shirt.png" alt=""/>
+          <div class="img-info">
+            <div class="info-inner">
+              <span class="p-name">I feel like Pablo</span>
+              <span class="p-company">Yeezy</span>
             </div>
-            <div className="carousel-slide-item__body">
-                <h4>{item.player.title}</h4>
-                <p>{item.player.desc}</p>
-            </div>
+            <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+          </div>
+        </div>
+
+        <div class="box-down">
+          <div class="h-bg">
+            <div class="h-bg-inner"></div>
+          </div>
+
+          <a class="cart" href="#">
+            <span class="price">$120</span>
+            <span class="add-to-cart">
+              <span class="txt">Add in cart</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
         </li>
     );
 };
 
 const keys = Array.from(Array(_items.length).keys());
 
-const Carousel = () => {
+const ProductCarousel = () => {
     const [items, setItems] = React.useState(keys);
     const [isTicking, setIsTicking] = React.useState(false);
     const [activeIdx, setActiveIdx] = React.useState(0);
@@ -124,20 +148,23 @@ const Carousel = () => {
         if (idx > activeIdx) nextClick(idx - activeIdx);
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (isTicking) sleep(300).then(() => setIsTicking(false));
     }, [isTicking]);
 
-    React.useEffect(() => {
-        setActiveIdx((length - (items[0] % length)) % length) // prettier-ignore
+    useEffect(() => {
+        setActiveIdx((length - (items[0] % length)) % length) 
     }, [items]);
 
     return (
         <div className="carousel__wrap">
+            <button className="carousel__btn carousel__btn--prev" onClick={() => prevClick()}>
+                <i className="carousel__btn-arrow carousel__btn-arrow--left" />
+            </button>
+            <button className="carousel__btn carousel__btn--next" onClick={() => nextClick()}>
+                <i className="carousel__btn-arrow carousel__btn-arrow--right" />
+            </button>
             <div className="carousel__inner">
-                <button className="carousel__btn carousel__btn--prev" onClick={() => prevClick()}>
-                    <i className="carousel__btn-arrow carousel__btn-arrow--left" />
-                </button>
                 <div className="carousel__container">
                     <ul className="carousel__slide-list">
                         {items.map((pos, i) => (
@@ -150,9 +177,6 @@ const Carousel = () => {
                         ))}
                     </ul>
                 </div>
-                <button className="carousel__btn carousel__btn--next" onClick={() => nextClick()}>
-                    <i className="carousel__btn-arrow carousel__btn-arrow--right" />
-                </button>
                 <div className="carousel__dots">
                     {items.slice(0, length).map((pos, i) => (
                         <button
@@ -167,4 +191,4 @@ const Carousel = () => {
     );
 };
 
-export default Carousel
+export default ProductCarousel

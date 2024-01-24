@@ -85,10 +85,10 @@ const Home = () => {
         </div>
       </section>
       <section className="news">
-        <div className="section__container news__container">
+        {/* <div className="section__container news__container"> */}
           <h2 className="section__title">Latest Trends</h2>
           <ProductCarousel />
-        </div>
+        {/* </div> */}
       </section>
       {/* <section className="section__container brands__container">
         <div className="brand__image">
